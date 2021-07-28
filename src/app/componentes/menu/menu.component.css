@@ -1,0 +1,220 @@
+@import url(../../app.component.css);
+
+#sidebar {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: auto;
+    z-index: 999;
+    background-color: var(--color-princial);
+    color: #fff;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: var(--color-princial);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.close{
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all ease .5s;
+}
+#dismiss .close:hover{
+    -moz-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background:var(--color-princial);
+   
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+  
+
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: var(--color-secundario);
+}
+
+a.article,
+a.article:hover {
+    background: var(--color-secundario);
+    color: #fff !important;
+}
+
+.doble{
+    display: flex;
+    align-items: baseline;
+    justify-content:flex-start;
+  }
+
+  .doble img{
+    width: 20px;
+    height: 20px;
+
+  }
+
+
+  .accordion-button, .accordion-body {
+      background-color: var(--color-princial)!important;
+      color: #fff!important;
+        padding:0!important;
+    
+  }
+  #sidebar{
+    background-color: var(--color-princial)!important;
+  } 
+  .accordion-button:focus {
+    z-index: 3;
+    border-color: #86b6fe00!important;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%)!important;
+}
+.accordion-button::after {
+    background-image: url("../../../assets/images/más-30.png")!important;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("../../../assets/images/menos-30.png")!important;
+    transform: rotate(
+-180deg
+);
+}
+button{
+    border: none!important;
+}
+.accordion-item {
+    padding: 2%;
+    background-color: rgba(52, 38, 38, 0)!important;
+    color: rgba(255, 255, 255, 0);
+
+}
+.servicios .servicio{
+    padding-left: 7%;
+    margin-bottom: 10px;
+}
+.servicios .servicio:first-child{
+    margin-top: 2%;
+    padding-left: 5%;
+    border-bottom: 1px dotted var(--color-secundario);
+
+}
+.d-flex{
+    width: 80%;
+    margin: auto;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b6fe00;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+}
+.d-flex .btn{
+    background-color: var(--color-secundario)!important;
+}
+
+@media (max-width: 600px) {
+    #sidebar {
+        width: 100%;
+        left: -100%;    
+    }
+  }

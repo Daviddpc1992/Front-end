@@ -1,0 +1,38 @@
+<section>
+    <h4>Seleciona una opcion de envío:</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 opciones " *ngFor="let envio of envios" (click)="onChange($event)">
+
+                <div class="opcion" [ngClass]="{'gratis': envio.importe==='¡GRATIS!', 'empty' : envio.importe===''}">
+                    <div class="datosTrans">
+                    <div class="bloque">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDisabled"
+                                id="flexRadioDisabled">
+                            <label class="form-check-label" for="flexRadioDisabled">
+
+                            </label>
+                        </div>
+                        <img [src]="envio.logo" alt="{{envio.nombre}}">
+                        <div>
+                            <h5>{{envio.nombre}}</h5>
+                            <p>{{envio.direccion}} {{envio.calle}}</p>
+                            <p>{{envio.horario}}</p>
+                        </div>
+                    </div>
+                    <h6>{{envio.importe}}</h6>
+                </div>
+                    <div class="" [ngClass]="{'masDetalle': envio.mapa !=='', 'detalles' : envio.mapa ===''}" id="accordion">
+                        <img [src]="envio.mapa" alt="">
+                    </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
