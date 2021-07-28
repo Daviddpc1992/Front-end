@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Recambios coche: repuestos de coche con envío gratis - Endado</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://www.endado.com/images/favicon/Favicon_32px.png?v=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d4b70ba15b.js" crossorigin="anonymous"></script>
+  <script>
+    $( function() {
+      $( "#accordion" ).accordion();
+    } );
+    </script>
+</head>
+
+<body>
+  <app-root></app-root>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#dismiss, .overlay').on('click', function () {
+        $('#sidebar').removeClass('active');
+        $('.overlay').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').addClass('active');
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

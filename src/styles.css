@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+:root {
+    --color-princial: #2A3B53;
+    --color-secundario: #cd9409;
+    --fuente-princial: 'Roboto', sans-serif;
+    --fontsize: 1em;
+    --padding: 0.625em
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
