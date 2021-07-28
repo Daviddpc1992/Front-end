@@ -45,6 +45,13 @@ section div .check{
     color: rgb(118, 118, 118);
 }
 
+#tracking div.active>p,
+p[aria-expanded="true"] {
+    color: #fff;
+    background: var(--color-princial);
+}
+
+
 @media (max-width: 600px) {
     section p{
         font-size: calc(var(--fontsize)/1.5);
