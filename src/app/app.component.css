@@ -29,7 +29,9 @@ header p{
     font-weight: 700;
 }
 
-
+.info{
+    display: inline-block;
+}
 /* Menu */
 button {
     background-color: rgba(255, 255, 255, 0)!important;
@@ -45,9 +47,7 @@ a:focus {
 color: var(--color-secundario)!important;
 }
 .navbar {
-    /* padding: 15px 10px; */
     border: none;
- 
     box-shadow: none!important;
 }
 
@@ -71,9 +71,7 @@ color: var(--color-secundario)!important;
     transition: all ease .5s;
 
 }
-.burger:hover{
-    width: 100%!important;
-}
+
 .burger:nth-child(1){
     width: 33%;
 }
@@ -82,5 +80,11 @@ color: var(--color-secundario)!important;
 }
 
 .botonMenu:hover .burger:nth-child(1),.botonMenu:hover .burger:nth-child(2){
-    width: 100%!important;
-}
+    width: 100%;
+} 
+
+@media (max-width: 600px) {
+    .info {
+      display: none;
+    }
+  }

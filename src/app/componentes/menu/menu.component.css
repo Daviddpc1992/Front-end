@@ -47,9 +47,6 @@
     -ms-transform: rotate(225deg);
     transform: rotate(225deg);
 }
-
-
-
 .overlay {
     display: none;
     position: fixed;
@@ -59,7 +56,6 @@
     z-index: 998;
     opacity: 0;
     transition: all 0.5s ease-in-out;
-
 }
 .overlay.active {
     display: block;
@@ -69,13 +65,10 @@
 #sidebar .sidebar-header {
     padding: 20px;
     background:var(--color-princial);
-   
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-  
-
 }
 
 #sidebar ul p {
@@ -90,14 +83,14 @@
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: var(--color-princial);
     background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: var(--color-princial);
 }
 
 a[data-toggle="collapse"] {
@@ -211,10 +204,32 @@ button{
 .d-flex .btn{
     background-color: var(--color-secundario)!important;
 }
+.info{
+    display: none; 
+    text-align: center;
+    margin: auto!important;
 
+}
 @media (max-width: 600px) {
     #sidebar {
         width: 100%;
         left: -100%;    
     }
+    .info{
+        display: inline-block; 
+        margin-left: 20%!important;
+        padding: 5%;
+    }
+
+    .info img{
+        width: 15%;
+        display: inline-block;
+        margin-left: 10%;
+        transition: all ease .5s;
+      
+    }
+    .info img:hover{
+        filter: invert(100);
+    }
+    
   }

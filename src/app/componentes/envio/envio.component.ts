@@ -19,11 +19,6 @@ export class EnvioComponent implements OnInit {
     this.envios = this.envioService.getAll()
   }
 
-  onChange($event) {
-  if($event){
-    this.desplegable.nativeElement.classList.add('masDetalle') || this.desplegable.nativeElement.classList.remove('masDetalle')
-  }
-  }
 
   // onChange() {
   //   this.desplegable.nativeElement.classList.add('masDetalle')
